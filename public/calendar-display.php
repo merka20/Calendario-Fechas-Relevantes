@@ -57,21 +57,30 @@ $days_of_week = array(
  * @param array  $months_array Array de nombres de meses
  * @return string Fecha formateada
  */
-function MK20_cfr_format_date($date_string, $months_array) {
-    $date_parts = explode('-', $date_string);
-    if (count($date_parts) === 3) {
-        $day = intval($date_parts[2]);
-        $month_num = intval($date_parts[1]);
-        $month_name = isset($months_array[$month_num]) ? $months_array[$month_num] : '';
-        
-        return sprintf(
-            /* translators: %1$d: day number, %2$s: month name */
-            _x('%1$d of %2$s', 'date format: day of month', 'calendario-fechas-relevantes'),
-            $day,
-            $month_name
-        );
+if (!function_exists('MK20_cfr_format_date')) {
+    /**
+     * Función para formatear fecha en texto
+     * 
+     * @param string $date_string Fecha en formato Y-m-d
+     * @param array  $months_array Array de nombres de meses
+     * @return string Fecha formateada
+     */
+    function MK20_cfr_format_date($date_string, $months_array) {
+        $date_parts = explode('-', $date_string);
+        if (count($date_parts) === 3) {
+            $day = intval($date_parts[2]);
+            $month_num = intval($date_parts[1]);
+            $month_name = isset($months_array[$month_num]) ? $months_array[$month_num] : '';
+            
+            return sprintf(
+                /* translators: %1$d: day number, %2$s: month name */
+                _x('%1$d of %2$s', 'date format: day of month', 'calendario-fechas-relevantes'),
+                $day,
+                $month_name
+            );
+        }
+        return $date_string;
     }
-    return $date_string;
 }
 ?>
 
