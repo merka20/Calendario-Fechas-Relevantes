@@ -1,0 +1,92 @@
+.MK20-cfr-admin-wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.MK20-cfr-admin-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.MK20-cfr-admin-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.MK20-cfr-admin-section:last-child {
+    border-bottom: none;
+}
+
+.MK20-cfr-admin-section h2 {
+    color: #2271b1;
+    margin-top: 0;
+}
+
+/* Filas de fechas - ACTUALIZADO para 3 columnas */
+.MK20-cfr-date-row {
+    display: grid;
+    grid-template-columns: 150px 1fr 100px 100px; /* fecha | descripción | color | botón */
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    align-items: start;
+}
+
+.MK20-cfr-date-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.MK20-cfr-description-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 80px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.MK20-cfr-date-color {
+    height: 40px;
+}
+
+.MK20-cfr-remove-date {
+    background: #dc3232;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.MK20-cfr-remove-date:hover {
+    background: #a00;
+}
+
+#MK20-cfr-add-date {
+    margin-top: 10px;
+}
+
+.MK20-cfr-shortcode {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 10px 0;
+    border-left: 4px solid #2271b1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .MK20-cfr-date-row {
+        grid-template-columns: 1fr;
+    }
+}

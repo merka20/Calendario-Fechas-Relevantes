@@ -1,0 +1,215 @@
+# Spanish (Spain) translation for Relevant Dates Calendar
+# Copyright (C) 2025
+# This file is distributed under the same license as the Relevant Dates Calendar package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Relevant Dates Calendar 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/calendario-fechas-relevantes\n"
+"POT-Creation-Date: 2025-01-01 12:00:00+00:00\n"
+"PO-Revision-Date: 2025-11-01 18:26+0100\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+msgid "Relevant Dates Calendar"
+msgstr "Calendario Fechas Relevantes"
+
+msgid "Calendar Dates"
+msgstr "Calendario Fechas"
+
+msgid "Are you sure you want to delete this date?"
+msgstr "¿Estás seguro de eliminar esta fecha?"
+
+msgid "Insufficient permissions"
+msgstr "Permisos insuficientes"
+
+msgid "Dates saved successfully"
+msgstr "Fechas guardadas correctamente"
+
+msgid "New Year"
+msgstr "Año Nuevo"
+
+msgid "Epiphany"
+msgstr "Día de Reyes"
+
+msgid "Labour Day"
+msgstr "Día del Trabajador"
+
+msgid "Assumption of Mary"
+msgstr "Asunción de la Virgen"
+
+msgid "National Day of Spain"
+msgstr "Fiesta Nacional de España"
+
+msgid "All Saints Day"
+msgstr "Día de Todos los Santos"
+
+msgid "Spanish Constitution Day"
+msgstr "Día de la Constitución Española"
+
+msgid "Immaculate Conception"
+msgstr "Inmaculada Concepción"
+
+msgid "Christmas"
+msgstr "Navidad"
+
+msgid "Spanish national holiday"
+msgstr "Festivo nacional de España"
+
+msgid "Maundy Thursday"
+msgstr "Jueves Santo"
+
+msgid "Good Friday"
+msgstr "Viernes Santo"
+
+msgid "Spanish national holiday - Holy Week"
+msgstr "Festivo nacional de España - Semana Santa"
+
+msgid "📅 Relevant Dates Calendar"
+msgstr "📅 Calendario Fechas Relevantes"
+
+msgid "⚙️ General Settings"
+msgstr "⚙️ Configuración General"
+
+msgid "Calendar Year"
+msgstr "Año del Calendario"
+
+msgid "Select the year to display in the calendar"
+msgstr "Selecciona el año para mostrar en el calendario"
+
+msgid "Default Color"
+msgstr "Color por Defecto"
+
+msgid "Default color for relevant dates"
+msgstr "Color predeterminado para las fechas relevantes"
+
+msgid "Show Spanish Holidays"
+msgstr "Mostrar Festivos de España"
+
+msgid "Automatically mark Spanish national holidays in red"
+msgstr "Marcar automáticamente los festivos nacionales de España en rojo"
+
+msgid "Includes fixed holidays and Holy Week (calculated automatically)"
+msgstr "Incluye festivos fijos y Semana Santa (calculada automáticamente)"
+
+msgid "📌 Custom Relevant Dates"
+msgstr "📌 Fechas Relevantes Personalizadas"
+
+msgid "E.g.: Alzheimer's Day"
+msgstr "Ej: Día del Alzheimer"
+
+msgid "Brief description..."
+msgstr "Descripción breve..."
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Add Date"
+msgstr "Añadir Fecha"
+
+# Shortcode section
+#: admin/settings-page.php:161
+msgid "🔗 Shortcode"
+msgstr "🔗 Shortcode"
+
+#: admin/settings-page.php:162
+msgid "Use this shortcode to display the calendar on any page or post:"
+msgstr "Usa este shortcode para mostrar el calendario en cualquier página o entrada:"
+
+#. translators: %s: shortcode example with year parameter
+#: admin/settings-page.php:166
+msgid "You can also specify a year: %s"
+msgstr "También puedes especificar un año: %s"
+
+msgid "💾 Save Settings"
+msgstr "💾 Guardar Configuración"
+
+msgid "January"
+msgstr "Enero"
+
+msgid "February"
+msgstr "Febrero"
+
+msgid "March"
+msgstr "Marzo"
+
+msgid "April"
+msgstr "Abril"
+
+msgid "May"
+msgstr "Mayo"
+
+msgid "June"
+msgstr "Junio"
+
+msgid "July"
+msgstr "Julio"
+
+msgid "August"
+msgstr "Agosto"
+
+msgid "September"
+msgstr "Septiembre"
+
+msgid "October"
+msgstr "Octubre"
+
+msgid "November"
+msgstr "Noviembre"
+
+msgid "December"
+msgstr "Diciembre"
+
+msgid "M"
+msgstr "L"
+
+msgid "T"
+msgstr "M"
+
+msgid "W"
+msgstr "X"
+
+msgid "F"
+msgstr "V"
+
+msgid "S"
+msgstr "S"
+
+msgid "📅 Calendar %d"
+msgstr "📅 Calendario %d"
+
+msgid "Saturday"
+msgstr "Sábado"
+
+msgid "Sunday"
+msgstr "Domingo"
+
+msgid "Weekend"
+msgstr "Fin de semana"
+
+msgid "Month Header Color 1"
+msgstr "Color de Cabecera 1"
+
+msgid "First color of the gradient for month headers"
+msgstr "Primer color del degradado para las cabeceras de los meses"
+
+msgid "Month Header Color 2"
+msgstr "Color de Cabecera 2"
+
+msgid "Second color of the gradient for month headers"
+msgstr "Segundo color del degradado para las cabeceras de los meses"
+
+msgid "Preview"
+msgstr "Vista Previa"
+
+msgid "%1$d of %2$s"
+msgstr "%1$d de %2$s"
+
+msgctxt "date format: day of month"
+msgid "%1$d of %2$s"
+msgstr "%1$d de %2$s"

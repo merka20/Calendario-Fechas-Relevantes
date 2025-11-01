@@ -1,0 +1,175 @@
+.MK20-cfr-calendar-container {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.MK20-cfr-calendar-year {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.MK20-cfr-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.MK20-cfr-month {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.MK20-cfr-month:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.MK20-cfr-month-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.MK20-cfr-month-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.MK20-cfr-days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #f7f7f7;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.MK20-cfr-day-name {
+    padding: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    color: #666;
+}
+
+.MK20-cfr-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    padding: 5px;
+}
+
+.MK20-cfr-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: default;
+    background: #fafafa;
+}
+
+.MK20-cfr-day-empty {
+    background: transparent;
+}
+
+.MK20-cfr-day-number {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    z-index: 1;
+    position: relative;
+}
+
+/* ========== FECHAS PERSONALIZADAS (CON TOOLTIP E INTERACCIÓN) ========== */
+.MK20-cfr-day-event {
+    cursor: pointer;
+    position: relative;
+    animation: MK20_cfr_pulse 2s infinite;
+}
+
+.MK20-cfr-day-event .MK20-cfr-day-number {
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Solo las fechas personalizadas (NO festivos ni fines de semana) tienen hover */
+.MK20-cfr-day-event:not(.MK20-cfr-day-holiday):not(.MK20-cfr-day-weekend):hover {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* CHINCHETA SOLO PARA EVENTOS PERSONALIZADOS */
+.MK20-cfr-day-event:not(.MK20-cfr-day-holiday):not(.MK20-cfr-day-weekend)::before {
+    content: '📌';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+    z-index: 2;
+}
+
+/* ========== FESTIVOS - SIN TOOLTIP NI INTERACCIÓN ========== */
+.MK20-cfr-day-holiday {
+    background-color: #dc3545 !important;
+    border: 2px solid #b02a37;
+    cursor: default; /* No es clickeable */
+}
+
+.MK20-cfr-day-holiday .MK20-cfr-day-number {
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* ========== FINES DE SEMANA - SIN TOOLTIP NI INTERACCIÓN ========== */
+.MK20-cfr-day-weekend {
+    background-color: #dc3545 !important;
+    cursor: default; /* No es clickeable */
+}
+
+.MK20-cfr-day-weekend .MK20-cfr-day-number {
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Animación solo para eventos personalizados */
+@keyframes MK20_cfr_pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+}
+
+/* ========== TOOLTIP ========== */
+.MK20-cfr-tooltip {
+    position: fixed !important;
+    z-index: 2147483647 !important;
+    pointer-events: none !important;
+}
+
+.MK20-cfr-tooltip * {
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .MK20-cfr-calendar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .MK20-cfr-day-number {
+        font-size: 12px;
+    }
+}
